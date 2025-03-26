@@ -1,0 +1,157 @@
+/* General Styles */
+.container {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  min-height: 100vh; /* Ensures footer stays at the bottom */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  position: relative;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  text-decoration: underline;
+}
+
+/* Burger Icon */
+.burger-icon {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.burger-line {
+  height: 4px;
+  background-color: white;
+  width: 100%;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #005f73;
+  color: white;
+}
+
+.hero-title {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.hero-text {
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.hero-button {
+  padding: 10px 20px;
+  background-color: #006f82;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.hero-button:hover {
+  background-color: #004f59;
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 20px;
+  background-color: #e0fbfc;
+  flex-wrap: wrap; /* Ensures responsiveness */
+  gap: 20px;
+}
+
+.feature-box {
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 25%;
+}
+
+.feature-title {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.feature-text {
+  font-size: 16px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  margin-top: auto; /* Pushes footer to the bottom */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 10px 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .burger-icon {
+    display: flex;
+  }
+
+  .features {
+    justify-content: center; /* Center the feature boxes */
+  }
+
+  .feature-box {
+    width: 90%; /* Makes boxes bigger on small screens */
+    margin-bottom: 20px;
+  }
+}
